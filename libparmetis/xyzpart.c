@@ -218,7 +218,7 @@ void RBBinCoordinates(ctrl_t *ctrl, graph_t *graph, idx_t ndims, real_t *xyz,
 
     emarkers[0] = gmin;
     emarkers[1] = gsum/gnvtxs;
-    emarkers[2] = gmax*(1.0+(gmax < 0 ? -1. : 1.)*2.0*REAL_EPSILON)
+    emarkers[2] = gmax * (1.0 + (gmax < 0 ? -1. : 1.) * 2.0 * REAL_EPSILON);
     cnbins = 2;
 
     /* get into a iterative backet boundary refinement */
