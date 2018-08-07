@@ -23,7 +23,7 @@ else()
   set(ParMETIS_LIBRARY_TYPE STATIC)
 endif()
 
-include(${GKLIB_PATH}/GKlibSystem.cmake)
+include_directories(${GKLIB_PATH})
 
 # List of paths that the compiler will search for header files.
 # i.e., the -I equivalent
@@ -33,7 +33,7 @@ include_directories(${GKLIB_PATH})
 include_directories(${METIS_PATH}/include)
 
 # List of directories that cmake will look for CMakeLists.txt
-add_subdirectory(${METIS_PATH}/libmetis ${CMAKE_BINARY_DIR}/libmetis)
+find_library(METIS_LIBRARY metis PATHS ${METIS_PATH}/lib)
 add_subdirectory(include)
 add_subdirectory(libparmetis)
 add_subdirectory(programs)

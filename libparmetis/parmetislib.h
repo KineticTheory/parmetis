@@ -20,7 +20,7 @@
 
 #include <parmetis.h>
 
-#include "../metis/libmetis/gklib_defs.h"
+#include <gklib_defs.h>
 
 #include <mpi.h> 
 
